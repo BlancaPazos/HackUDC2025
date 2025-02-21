@@ -1,0 +1,97 @@
+[
+    {
+      "id": 1,
+      "name": "Pepe",
+      "skills": [
+        "Oracle",
+        "Java",
+        "SQL",
+        "Project Management"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Juan",
+      "skills": [
+        "Excel",
+        "Power BI",
+        "Data Analysis",
+        "Oracle"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Cristina",
+      "skills": [
+        "Oracle",
+        "Python",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "María",
+      "skills": [
+        "Excel",
+        "Python",
+        "Data Visualization"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Carlos",
+      "skills": [
+        "Project Management",
+        "Leadership",
+        "Excel"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Sofía",
+      "skills": [
+        "JavaScript",
+        "React",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Andrés",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "MongoDB"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Lucía",
+      "skills": [
+        "Node.js",
+        "Express",
+        "SQL"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Pablo",
+      "skills": [
+        "Oracle",
+        "Java",
+        "DevOps",
+        "Docker"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Marta",
+      "skills": [
+        "Angular",
+        "TypeScript",
+        "RxJS"
+      ]
+    }
+  ]
+  
