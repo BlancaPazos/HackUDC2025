@@ -22,6 +22,9 @@ function Login() {
       .then((data) => {
         // data.success === true
         alert(`¡Bienvenid@, ${data.user.name}!`);
+        
+        localStorage.setItem('userName', data.user.name);
+        
         navigate('/menu');
       })
       .catch(() => {

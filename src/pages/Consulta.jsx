@@ -1,48 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Consulta() {
-  const [users, setUsers] = useState([]);
   const [skill, setSkill] = useState('');
-  const [error, setError] = useState('');
-  const [searched, setSearched] = useState(false); // Nuevo estado para controlar si se ha realizado una búsqueda
   const navigate = useNavigate();
 
-  // Función para hacer la consulta a la API
-  const fetchData = (filtro) => {
-    setError(''); // Limpiar el mensaje de error
-
-    // Si no hay filtro, mostramos todos los usuarios
-    const url = filtro
-      ? `http://localhost:3001/api/users/search?skill=${filtro}`
-      : 'http://localhost:3001/api/users';
-
-    fetch(url)
-      .then(res => {
-        if (!res.ok) {
-          // Si no fue OK, lanzamos un error
-          throw new Error('No se encontraron usuarios con esa habilidad.');
-        }
-        return res.json();
-      })
-      .then(data => {
-        setUsers(data); // Actualizamos los usuarios con los resultados
-      })
-      .catch(err => {
-        setError(err.message); // Si hay error, lo mostramos
-        setUsers([]); // Asegurarnos de que no quede nada en la lista de usuarios
-      });
-  };
-
-  // Función para manejar la búsqueda
   const handleSearch = () => {
-    setSearched(true); // Indicamos que se ha realizado una búsqueda
-    if (skill.trim() !== '') {
-      fetchData(skill); // Solo buscamos si el campo no está vacío
-    } else {
-      // Si el campo está vacío, mostramos todos los usuarios
-      fetchData('');
+    if (skill.trim() === '') {
+      alert('Por favor, introduce una consulta válida.');
+      return;
     }
+
+    // Navegar a la pantalla de Resultados pasando el texto de la consulta
+    navigate('/resultados', { state: { query: skill } });
   };
 
   return (
@@ -60,28 +30,9 @@ function Consulta() {
           type="text"
           placeholder="Escribe aquí tu consulta"
           value={skill}
-          onChange={(e) => setSkill(e.target.value)}  // Actualizamos el estado 'skill' con el valor del input
+          onChange={(e) => setSkill(e.target.value)}
         />
         <button onClick={handleSearch}>Buscar</button>
-
-        {error && <p style={{ color: 'red' }}>{error}</p>}  {/* Mostramos el mensaje de error si hay alguno */}
-        
-        {searched && (
-          <div>
-            <h2>Resultados:</h2>
-            <div style={{ maxHeight: '400px', overflowY: 'auto' }}>
-              {users.length === 0 ? (
-                <p>No se encontraron usuarios con esa habilidad.</p>
-              ) : (
-                <ul>
-                  {users.map(user => (
-                    <li key={user.id}>{user.name} - {user.skills.join(', ')}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Menu() {
   const navigate = useNavigate();
+  const userName = localStorage.getItem('userName') || 'Usuario';
 
   return (
     <div>
@@ -12,7 +13,7 @@ function Menu() {
         </button>
       </div>
       <div className="container">
-        <h1>Hola</h1>
+        <h1>Hola, {userName}</h1>
         <h2>¿Qué deseas realizar?</h2>
         <div className="button-group">
           <button onClick={() => navigate('/consulta')}>Consulta</button>
