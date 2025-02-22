@@ -92,6 +92,812 @@
         "TypeScript",
         "RxJS"
       ]
+    },
+    {
+      "id": 11,
+      "name": "Adrian",
+      "skills": [
+        "Oracle",
+        "Angular",
+        "CSS"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Juan",
+      "skills": [
+        "Excel",
+        "Java"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Xiana",
+      "skills": [
+        "Oracle",
+        "Machine Learning",
+        "Power BI",
+        "SQL",
+        "HTML"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Miguel",
+      "skills": [
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Carlos",
+      "skills": [
+        "Angular",
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Laura",
+      "skills": [
+        "C#",
+        "ASP.NET",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Alberto",
+      "skills": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Isabel",
+      "skills": [
+        "Python",
+        "Data Analysis",
+        "Tableau"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "David",
+      "skills": [
+        "JavaScript",
+        "Vue.js",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Raquel",
+      "skills": [
+        "Project Management",
+        "Agile",
+        "Scrum",
+        "Leadership"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Javier",
+      "skills": [
+        "AWS",
+        "Docker",
+        "CI/CD"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Paula",
+      "skills": [
+        "Python",
+        "Data Engineering",
+        "Apache Spark"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Luis",
+      "skills": [
+        "Kubernetes",
+        "Cloud Infrastructure",
+        "Terraform"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Elena",
+      "skills": [
+        "Ruby",
+        "Rails",
+        "SQL"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Fernando",
+      "skills": [
+        "C++",
+        "Linux",
+        "Embedded Systems"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Esteban",
+      "skills": [
+        "Swift",
+        "iOS Development",
+        "Xcode"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Beatriz",
+      "skills": [
+        "PHP",
+        "MySQL",
+        "Laravel"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Victor",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Santiago",
+      "skills": [
+        "React",
+        "Redux",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Sara",
+      "skills": [
+        "Data Science",
+        "R",
+        "Statistical Analysis"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Fernando",
+      "skills": [
+        "C++",
+        "Linux",
+        "Embedded Systems"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Esteban",
+      "skills": [
+        "Swift",
+        "iOS Development",
+        "Xcode"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Beatriz",
+      "skills": [
+        "PHP",
+        "MySQL",
+        "Laravel"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Victor",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Santiago",
+      "skills": [
+        "React",
+        "Redux",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Carlos",
+      "skills": [
+        "AWS",
+        "Python",
+        "Data Engineering"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Ana",
+      "skills": [
+        "SQL",
+        "Power BI",
+        "Data Visualization"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Pedro",
+      "skills": [
+        "C#",
+        "ASP.NET",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Teresa",
+      "skills": [
+        "JavaScript",
+        "Node.js",
+        "MongoDB"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Rafael",
+      "skills": [
+        "Python",
+        "TensorFlow",
+        "Deep Learning"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Carmen",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Microservices"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Jorge",
+      "skills": [
+        "Go",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Mónica",
+      "skills": [
+        "PHP",
+        "Symfony",
+        "MySQL"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Raúl",
+      "skills": [
+        "Ruby",
+        "Rails",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Lucía",
+      "skills": [
+        "Azure",
+        "DevOps",
+        "Infrastructure Automation"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "David",
+      "skills": [
+        "JavaScript",
+        "Vue.js",
+        "Vuex"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Elena",
+      "skills": [
+        "Python",
+        "Flask",
+        "Web Development"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Antonio",
+      "skills": [
+        "Java",
+        "J2EE",
+        "Spring"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Nuria",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Rosa",
+      "skills": [
+      ]
+    },
+    {
+      "id": 51,
+      "name": "David",
+      "skills": [
+        "Node.js",
+        "React",
+        "MongoDB"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Esteban",
+      "skills": [
+        "PHP",
+        "Laravel",
+        "MySQL"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Cristina",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Hibernate"
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Ángel",
+      "skills": [
+        "SQL",
+        "Oracle",
+        "Data Engineering"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Marta",
+      "skills": [
+        "Vue.js",
+        "Node.js",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Sergio",
+      "skills": [
+        "C#",
+        "ASP.NET Core",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Paula",
+      "skills": [
+        "Python",
+        "Machine Learning",
+        "Data Science"
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Manuel",
+      "skills": [
+        "Ruby",
+        "Ruby on Rails",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Elena",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Redux"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "José",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Microservices"
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Laura",
+      "skills": [
+        "Kotlin",
+        "Android Development",
+        "Jetpack"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Carlos",
+      "skills": [
+        "Docker",
+        "Kubernetes",
+        "AWS"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Sofía",
+      "skills": [
+        "JavaScript",
+        "Vue.js",
+        "Node.js"
+      ]
+    },
+    {
+      "id": 64,
+      "name": "Juan",
+      "skills": [
+        "PHP",
+        "Laravel",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 65,
+      "name": "David",
+      "skills": [
+        "Swift",
+        "iOS Development",
+        "Xcode"
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Pablo",
+      "skills": [
+        "AWS",
+        "DevOps",
+        "Terraform"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Ángel",
+      "skills": [
+        "Python",
+        "Django",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Raquel",
+      "skills": [
+        "Java",
+        "Spring",
+        "Hibernate"
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Margarita",
+      "skills": [
+        "Excel",
+        "Power BI",
+        "Data Visualization"
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Lucas",
+      "skills": [
+        "JavaScript",
+        "Node.js",
+        "Express"
+      ]
+    },
+    {
+      "id": 71,
+      "name": "Teresa",
+      "skills": [
+        "Python",
+        "SQL",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": 72,
+      "name": "Raúl",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Hibernate"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Antonio",
+      "skills": [
+        "C#",
+        "ASP.NET",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Martín",
+      "skills": [
+        "React",
+        "Redux",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 75,
+      "name": "Santiago",
+      "skills": [
+        "Vue.js",
+        "Node.js",
+        "MongoDB"
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Álvaro",
+      "skills": [
+        "Python",
+        "Flask",
+        "SQL"
+      ]
+    },
+    {
+      "id": 77,
+      "name": "Carmen",
+      "skills": [
+        "JavaScript",
+        "Angular",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": 78,
+      "name": "José Luis",
+      "skills": [
+        "PHP",
+        "MySQL",
+        "WordPress"
+      ]
+    },
+    {
+      "id": 79,
+      "name": "Paula",
+      "skills": [
+        "Java",
+        "Spring",
+        "Hibernate"
+      ]
+    },
+    {
+      "id": 80,
+      "name": "Tomás",
+      "skills": [
+        "React",
+        "Redux",
+        "Node.js"
+      ]
+    },
+    {
+      "id": 81,
+      "name": "Verónica",
+      "skills": [
+        "C++",
+        "Linux",
+        "Networking"
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Carlos",
+      "skills": [
+        "Angular",
+        "Node.js",
+        "Express"
+      ]
+    },
+    {
+      "id": 83,
+      "name": "Marta",
+      "skills": [
+        "Swift",
+        "iOS Development",
+        "Xcode"
+      ]
+    },
+    {
+      "id": 84,
+      "name": "Antonio",
+      "skills": [
+        "Go",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "María",
+      "skills": [
+        "Python",
+        "Machine Learning",
+        "Deep Learning"
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Sofia",
+      "skills": [
+        "JavaScript",
+        "React",
+        "GraphQL"
+      ]
+    },
+    {
+      "id": 87,
+      "name": "Jorge",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": 88,
+      "name": "Luis",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "Node.js"
+      ]
+    },
+    {
+      "id": 89,
+      "name": "Ángel",
+      "skills": [
+        "PHP",
+        "Laravel",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 90,
+      "name": "Pedro",
+      "skills": [
+        "C#",
+        "ASP.NET Core",
+        "SQL Server"
+      ]
+    },
+    {
+      "id": 91,
+      "name": "Cristina",
+      "skills": [
+        "Python",
+        "Data Science",
+        "TensorFlow"
+      ]
+    },
+    {
+      "id": 92,
+      "name": "Felipe",
+      "skills": [
+        "Java",
+        "Spring",
+        "JPA"
+      ]
+    },
+    {
+      "id": 93,
+      "name": "Marcela",
+      "skills": [
+        "Kotlin",
+        "Android Development",
+        "Jetpack"
+      ]
+    },
+    {
+      "id": 94,
+      "name": "Valeria",
+      "skills": [
+        "React",
+        "Redux",
+        "Node.js"
+      ]
+    },
+    {
+      "id": 95,
+      "name": "Gonzalo",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Microservices"
+      ]
+    },
+    {
+      "id": 96,
+      "name": "Nuria",
+      "skills": [
+        "Angular",
+        "TypeScript",
+        "RxJS"
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Rocío",
+      "skills": [
+        "PHP",
+        "Symfony",
+        "MySQL"
+      ]
+    },
+    {
+      "id": 98,
+      "name": "Fernando",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Hibernate"
+      ]
+    },
+    {
+      "id": 99,
+      "name": "Felipe",
+      "skills": [
+        "Swift",
+        "iOS Development",
+        "Xcode"
+      ]
+    },
+    {
+      "id": 100,
+      "name": "Raul",
+      "skills": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ]
     }
   ]
   
