@@ -12,10 +12,15 @@ app.use(express.json());
 const dbPath = path.join(__dirname, '..', 'database', 'database.json');
 
 // GET /api/users/check?employeeId=123
+// Ejemplo completo
 app.get('/api/users/check', (req, res) => {
   const { employeeId } = req.query;
-  // Leer base de datos JSON (o tu fuente de datos)
-  // Buscar si existe algún usuario con ese ID
+
+  // Leer y parsear el JSON en cada petición (simple pero funciona)
+  const rawData = fs.readFileSync(dbPath, 'utf-8');
+  const data = JSON.parse(rawData);
+
+  // Buscar el usuario
   const userFound = data.find((user) => user.id === Number(employeeId));
 
   if (userFound) {

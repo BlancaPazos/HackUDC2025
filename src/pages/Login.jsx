@@ -11,22 +11,20 @@ function Login() {
       return;
     }
 
-    // Llamada al backend para comprobar si existe el usuario
+    // Llamar a tu backend en el puerto 3001
     fetch(`http://localhost:3001/api/users/check?employeeId=${employeeId}`)
       .then((response) => {
         if (!response.ok) {
-          // Si la respuesta no es 2xx, lanzamos un error para ir al catch
           throw new Error('Usuario no encontrado');
         }
         return response.json();
       })
       .then((data) => {
-        // data.success === true => usuario existe
+        // data.success === true
         alert(`¡Bienvenido/a, ${data.user.name}!`);
         navigate('/menu');
       })
-      .catch((err) => {
-        // Error de fetch o usuario no encontrado
+      .catch(() => {
         alert('No se encontró un usuario con ese ID');
       });
   };
