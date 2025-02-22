@@ -5,6 +5,7 @@ function Consulta() {
   const [users, setUsers] = useState([]);
   const [skill, setSkill] = useState('');
   const [error, setError] = useState('');
+  const [searched, setSearched] = useState(false); // Nuevo estado para controlar si se ha realizado una búsqueda
   const navigate = useNavigate();
 
   // Función para hacer la consulta a la API
@@ -35,6 +36,7 @@ function Consulta() {
 
   // Función para manejar la búsqueda
   const handleSearch = () => {
+    setSearched(true); // Indicamos que se ha realizado una búsqueda
     if (skill.trim() !== '') {
       fetchData(skill); // Solo buscamos si el campo no está vacío
     } else {
@@ -64,18 +66,22 @@ function Consulta() {
 
         {error && <p style={{ color: 'red' }}>{error}</p>}  {/* Mostramos el mensaje de error si hay alguno */}
         
-        <div>
-          <h2>Resultados:</h2>
-          {users.length === 0 ? (
-            <p>No se encontraron usuarios con esa habilidad.</p>
-          ) : (
-            <ul>
-              {users.map(user => (
-                <li key={user.id}>{user.name} - {user.skills.join(', ')}</li>
-              ))}
-            </ul>
-          )}
-        </div>
+        {searched && (
+          <div>
+            <h2>Resultados:</h2>
+            <div style={{ maxHeight: '400px', overflowY: 'auto' }}>
+              {users.length === 0 ? (
+                <p>No se encontraron usuarios con esa habilidad.</p>
+              ) : (
+                <ul>
+                  {users.map(user => (
+                    <li key={user.id}>{user.name} - {user.skills.join(', ')}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
