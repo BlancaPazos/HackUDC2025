@@ -19,20 +19,25 @@ function Registro() {
   };
 
   return (
-    <div className="container">
-      <h1>HackUDC 2025</h1>
+    <div className="container-resultados">
+      <h1>Registro</h1>
       <h2>¿Qué deseas registrar?</h2>
       <textarea
         placeholder="Ej: He aprendido a usar la biblioteca OpenNN"
         value={texto}
         onChange={(e) => setTexto(e.target.value)}
       />
+      <span style={{ height: '15px', display: 'inline-block' }}></span>
+      <h2>¿Qué recursos has utilizado?</h2>
       <textarea
         placeholder="Recursos que has utilizado: (URLs, webs...)"
         value={recursos}
         onChange={(e) => setRecursos(e.target.value)}
       />
+      <span style={{ height: '15px', display: 'inline-block' }}></span>
       <button onClick={handleSave}>Guardar</button>
+      <span style={{ height: '15px', display: 'inline-block' }}></span>
+      <button onClick={() => navigate('/menu')}>Cancelar</button>
     </div>
   );
 }

@@ -6,9 +6,9 @@ function ErrorPage() {
 
   return (
     <div className="container">
-      <h1>HackUDC 2025</h1>
-      <h2>ERROR!</h2>
-      <p>Es necesario cubrir los dos campos del registro</p>
+      <h1>¡ERROR!</h1>
+      <h2>Es necesario cubrir los dos campos del registro</h2>
+      <span style={{ height: '15px', display: 'inline-block' }}></span>
       <button onClick={() => navigate('/registro')}>Volver</button>
     </div>
   );

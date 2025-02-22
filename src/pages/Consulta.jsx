@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Consulta() {
   const [users, setUsers] = useState([]);
   const [skill, setSkill] = useState('');
+  const navigate = useNavigate();
 
   const fetchData = (filtro) => {
     // Ajusta la URL en base a si se pasa skill o no
@@ -27,23 +29,24 @@ function Consulta() {
 
   return (
     <div>
-      <h1>Búsqueda de usuarios</h1>
-      <input
-        type="text"
-        placeholder="Filtrar por skill"
-        value={skill}
-        onChange={(e) => setSkill(e.target.value)}
-      />
-      <button onClick={handleSearch}>Buscar</button>
-
-      <ul>
-        {users.map(u => (
-          <li key={u.id}>
-            {u.name} - Skills: {u.skills?.join(', ')}
-          </li>
-        ))}
-      </ul>
+      <div className="back-button-container">
+        <button className="back-button" onClick={() => navigate('/menu')}>
+          ←
+        </button>
+      </div>
+      <div className="container">
+        <h1>Consulta</h1>
+        <h2>Escribe a continuación la consulta que deseas realizar:</h2>
+        <input
+          type="text"
+          placeholder="Escribe aquí tu consulta"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button onClick={handleSearch}>Buscar</button>
+      </div>
     </div>
+
   );
 }
 

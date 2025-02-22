@@ -20,9 +20,9 @@ function Resultados() {
   ];
 
   return (
-    <div className="container">
-      <h1>HackUDC 2025</h1>
-      <h2>Consulta: {location.state?.query || 'Consulta no definida'}</h2>
+    <div className="container-resultados">
+      <h1>Consulta realizada: </h1>
+      <h2>{location.state?.query || 'Consulta no definida'}</h2>
       
       <h3>Resultados relacionados:</h3>
       {fakeResults.map((r, idx) => (

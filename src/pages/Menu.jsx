@@ -5,13 +5,26 @@ function Menu() {
   const navigate = useNavigate();
 
   return (
-    <div className="container">
-      <h1>HackUDC 2025</h1>
-      <h2>¿Qué deseas realizar?</h2>
-      <div className="button-group">
-        <button onClick={() => navigate('/consulta')}>Consulta</button>
-        <button onClick={() => navigate('/registro')}>Registro</button>
+    <div>
+      <div className="back-button-container">
+        <button className="back-button" onClick={() => navigate('/')}>
+          ←
+        </button>
       </div>
+      <div className="container">
+        <h1>Hola</h1>
+        <h2>¿Qué deseas realizar?</h2>
+        <div className="button-group">
+          <button onClick={() => navigate('/consulta')}>Consulta</button>
+          <span style={{ width: '40px', display: 'inline-block' }}></span>
+          <button onClick={() => navigate('/registro')}>Registro</button>
+        </div>
+      </div>
+
+      <div className="footer-banner">
+        <h3>"Cada error que corriges te acerca a ser un mejor programador"</h3>
+      </div>
+
     </div>
   );
 }

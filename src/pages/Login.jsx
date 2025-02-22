@@ -21,7 +21,7 @@ function Login() {
       })
       .then((data) => {
         // data.success === true
-        alert(`¡Bienvenido/a, ${data.user.name}!`);
+        alert(`¡Bienvenid@, ${data.user.name}!`);
         navigate('/menu');
       })
       .catch(() => {
@@ -30,16 +30,22 @@ function Login() {
   };
 
   return (
-    <div className="container">
-      <h1>HackUDC 2025</h1>
-      <p>Introduce tu ID de empleado</p>
-      <input
-        type="text"
-        placeholder="Ej: 123"
-        value={employeeId}
-        onChange={(e) => setEmployeeId(e.target.value)}
-      />
-      <button onClick={handleAccess}>Acceder</button>
+    <div>
+      <div className="container">
+        <h1>Bienvenid@</h1>
+        <p>Introduce tu ID de empleado:</p>
+        <input
+          type="text"
+          placeholder="Ej: 123"
+          value={employeeId}
+          onChange={(e) => setEmployeeId(e.target.value)}
+        />
+        <button onClick={handleAccess}>Acceder</button>
+      </div>
+
+      <div className="footer-banner">
+        <h3>"El mejor programador no es el que lo sabe todo, sino el que nunca deja de aprender"</h3>
+      </div>
     </div>
   );
 }
