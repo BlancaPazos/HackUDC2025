@@ -8,3 +8,4 @@ Integrantes del grupo:
 INICIO:
 - Creación de database de 250 personas (.json y .sql)
 - Diseño web del front-end mediante canvas
+- Diseño base del front de la aplicación
