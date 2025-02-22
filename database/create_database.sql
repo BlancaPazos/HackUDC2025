@@ -8,10 +8,3 @@ CREATE TABLE IF NOT EXISTS users (
   name VARCHAR(100) NOT NULL,
   skills TEXT -- Guardaremos las habilidades en un texto (ej. JSON o coma-separado)
 );
-
-INSERT INTO users (name, skills)
-VALUES
-  ('Pepe', '["Oracle","Java"]'),
-  ('Juan', '["Oracle","Excel"]'),
-  ('Cristina', '["Oracle","Python"]'),
-  ('María', '["Excel","Python"]');

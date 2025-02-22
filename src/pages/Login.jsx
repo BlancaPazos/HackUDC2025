@@ -6,13 +6,29 @@ function Login() {
   const navigate = useNavigate();
 
   const handleAccess = () => {
-    if (employeeId.trim() !== '') {
-      // Aquí podrías validar o llamar a la API
-      navigate('/menu');
-    } else {
-      // Podrías mostrar un mensaje de error
+    if (!employeeId.trim()) {
       alert('Por favor, introduce un ID válido');
+      return;
     }
+
+    // Llamada al backend para comprobar si existe el usuario
+    fetch(`http://localhost:3001/api/users/check?employeeId=${employeeId}`)
+      .then((response) => {
+        if (!response.ok) {
+          // Si la respuesta no es 2xx, lanzamos un error para ir al catch
+          throw new Error('Usuario no encontrado');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // data.success === true => usuario existe
+        alert(`¡Bienvenido/a, ${data.user.name}!`);
+        navigate('/menu');
+      })
+      .catch((err) => {
+        // Error de fetch o usuario no encontrado
+        alert('No se encontró un usuario con ese ID');
+      });
   };
 
   return (
