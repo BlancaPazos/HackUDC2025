@@ -41,20 +41,25 @@ app.get('/api/users', (req, res) => {
 
 // 2) Endpoint de búsqueda filtrada (por ejemplo, buscar por skill)
 app.get('/api/users/search', (req, res) => {
-  const { skill } = req.query; // http://localhost:3001/api/users/search?skill=Oracle
+  const { skill } = req.query;  // Extraemos la habilidad de la consulta
 
   const rawData = fs.readFileSync(dbPath, 'utf-8');
   const data = JSON.parse(rawData);
 
-  // Filtrar
+  // Filtrar por habilidad si la habilidad está definida
   if (!skill) {
-    return res.json(data); // si no hay 'skill' en query, manda todo
+    return res.json(data);  // Si no hay skill, devuelve todos los usuarios
   }
 
-  const filtered = data.filter(u =>
-    u.skills && u.skills.some(s => s.toLowerCase() === skill.toLowerCase())
+  const filtered = data.filter(user =>
+    user.skills && user.skills.some(s => s.toLowerCase() === skill.toLowerCase())
   );
-  res.json(filtered);
+
+  if (filtered.length === 0) {
+    return res.status(404).json({ message: "No se encontraron usuarios con esa habilidad." });  // Si no hay coincidencias
+  }
+
+  res.json(filtered);  // Devolver los usuarios filtrados
 });
 
 // 3) Arrancar el servidor
