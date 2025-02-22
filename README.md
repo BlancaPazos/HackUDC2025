@@ -5,3 +5,6 @@ Integrantes del grupo:
 - Santiago Cabral Silva
 - Guillermo Raposo Iglesias 
 
+INICIO:
+- Creación de database de 250 personas (.json y .sql)
+- Diseño web del front-end mediante canvas
