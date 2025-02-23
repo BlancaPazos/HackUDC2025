@@ -43,20 +43,25 @@ function Resultados() {
       <h2>{query}</h2>
       <h3>Resultados obtenidos:</h3>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      
       {loading ? (
         <p>Cargando resultados...</p>
       ) : (
-        <div style={{ maxHeight: '400px', overflowY: 'auto' }}>
+        <div className="results-grid">
           {users.length === 0 ? (
             <p>No se encontraron usuarios con esa habilidad.</p>
           ) : (
-            <ul>
-              {users.map((user) => (
-                <li key={user.id}>
-                  {user.name} - {user.skills.join(', ')}
-                </li>
-              ))}
-            </ul>
+            users.map((user) => (
+              <div key={user.id} className="user-card">
+                <h3>{user.name}</h3>
+                <p><strong>Habilidades:</strong></p>
+                <ul>
+                  {user.skills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            ))
           )}
         </div>
       )}

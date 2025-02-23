@@ -13,6 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-y: auto;
 }
 
 .header {
@@ -26,6 +27,16 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
+}
+
+.results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 2rem; /* Espacio extra para evitar que los elementos queden pegados al final */
 }
   
 /* Contenedor principal */
@@ -53,20 +64,38 @@ body {
   max-width: 55rem;
   padding: 2rem;
   text-align: center;
-  margin-top: 0;
-  margin: 4rem auto 2rem auto;
+  margin-top: 6rem; /* Ajuste para no tapar el banner superior */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Asegura que el contenido empieza arriba */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Para que no sea absoluto y permita scroll */
+  overflow-y: auto; /* Permite el scroll dentro del contenedor */
+  max-height: 80vh; /* Define la altura máxima */
+}
+
+.container-registro {
+  width: 85%; /* Más ancho que antes */
+  max-width: 55rem;  /*Más grande en pantallas grandes */
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 h1 {
   text-align: center;
@@ -89,6 +118,34 @@ h3 {
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* Diseño de las tarjetas de usuario */
+.user-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+}
+
+.user-card h3 {
+  margin-bottom: 10px;
+  color: #4f6f52;
+}
+
+.user-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-card li {
+  background: #a1c399;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
 }
 
 input, textarea {

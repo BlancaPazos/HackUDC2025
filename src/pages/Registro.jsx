@@ -19,7 +19,7 @@ function Registro() {
   };
 
   return (
-    <div className="container-resultados">
+    <div className="container-registro">
       <h1>Registro</h1>
       <h2>¿Qué deseas registrar?</h2>
       <textarea
