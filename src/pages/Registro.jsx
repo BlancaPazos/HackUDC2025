@@ -16,10 +16,10 @@ function Registro() {
     }
   
     if (!texto.trim() || !recursos.trim()) {
-      alert('Los campos no pueden estar vacíos.');
+      navigate('/Error');
       return;
     }
-  
+   
     try {
       const response = await fetch('http://localhost:3001/api/users/add-skill', {  // URL completa al servidor
         method: 'PUT',
@@ -44,6 +44,7 @@ function Registro() {
     } catch (error) {
       console.error('Error al guardar el registro:', error);
       alert(`Registro guardado`);
+      navigate('/menu');
     }
   };
   
