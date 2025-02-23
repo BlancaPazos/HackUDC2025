@@ -62,6 +62,40 @@ app.get('/api/users/search', (req, res) => {
   res.json(filtered);  // Devolver los usuarios filtrados
 });
 
+// 4) Endpoint para agregar una nueva skill al usuario logueado
+app.post('/api/users/add-skill', (req, res) => {
+  const { employeeId, campoRegistro, campoRecursos } = req.body;
+
+  if (!employeeId || !campoRegistro || !campoRecursos) {
+    return res.status(400).json({ success: false, message: 'Datos incompletos' });
+  }
+
+  const rawData = fs.readFileSync(dbPath, 'utf-8');
+  const data = JSON.parse(rawData);
+
+  // Buscar el usuario en la base de datos
+  const userIndex = data.findIndex((user) => user.id === Number(employeeId));
+
+  if (userIndex === -1) {
+    return res.status(403).json({ success: false, message: 'Acceso denegado' });
+  }
+
+  // Crear la nueva skill en formato "registro-recursos utilizados"
+  const newSkill = `${campoRegistro}-${campoRecursos}`;
+
+  // Agregar la nueva skill solo si no está ya en el array
+  if (!data[userIndex].skills.includes(newSkill)) {
+    data[userIndex].skills.push(newSkill);
+  } else {
+    return res.status(400).json({ success: false, message: 'Skill ya existe en el usuario' });
+  }
+
+  // Guardar los cambios en database.json
+  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+
+  res.json({ success: true, message: 'Skill añadida correctamente', user: data[userIndex] });
+});
+
 // 3) Arrancar el servidor
 const PORT = 3001; 
 app.listen(PORT, () => {
