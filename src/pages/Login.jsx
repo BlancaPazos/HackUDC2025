@@ -24,7 +24,7 @@ function Login() {
         alert(`¡Bienvenid@, ${data.user.name}!`);
         
         // Guardar el ID y el nombre en localStorage
-        localStorage.setItem('employeeId', employeeId);
+        localStorage.setItem('employeeId', data.user.employeeId);
         localStorage.setItem('userName', data.user.name);
         
         navigate('/menu');

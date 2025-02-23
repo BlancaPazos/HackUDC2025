@@ -63,38 +63,44 @@ app.get('/api/users/search', (req, res) => {
 });
 
 // 4) Endpoint para agregar una nueva skill al usuario logueado
-app.post('/api/users/add-skill', (req, res) => {
+// 4) Endpoint para agregar una nueva skill al usuario logueado
+app.put('/api/users/add-skill', (req, res) => {
   const { employeeId, campoRegistro, campoRecursos } = req.body;
 
   if (!employeeId || !campoRegistro || !campoRecursos) {
-    return res.status(400).json({ success: false, message: 'Datos incompletos' });
+    return res.status(400).json({ success: false, message: "Todos los campos son obligatorios." });
   }
 
+  // Leer y parsear el JSON
   const rawData = fs.readFileSync(dbPath, 'utf-8');
   const data = JSON.parse(rawData);
 
-  // Buscar el usuario en la base de datos
-  const userIndex = data.findIndex((user) => user.id === Number(employeeId));
+  // Buscar el usuario
+  const userIndex = data.findIndex(user => user.id === Number(employeeId));
 
   if (userIndex === -1) {
-    return res.status(403).json({ success: false, message: 'Acceso denegado' });
+    return res.status(404).json({ success: false, message: "Usuario no encontrado." });
   }
 
-  // Crear la nueva skill en formato "registro-recursos utilizados"
-  const newSkill = `${campoRegistro}-${campoRecursos}`;
+  // Agregar la nueva skill al usuario
+  const newSkill = {
+    skill: campoRegistro,
+    resources: campoRecursos,
+  };
 
-  // Agregar la nueva skill solo si no está ya en el array
-  if (!data[userIndex].skills.includes(newSkill)) {
-    data[userIndex].skills.push(newSkill);
-  } else {
-    return res.status(400).json({ success: false, message: 'Skill ya existe en el usuario' });
+  if (!data[userIndex].skills) {
+    data[userIndex].skills = [];
   }
 
-  // Guardar los cambios en database.json
-  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+  data[userIndex].skills.push(newSkill);
 
-  res.json({ success: true, message: 'Skill añadida correctamente', user: data[userIndex] });
+  // Guardar el JSON actualizado
+  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2), 'utf-8');
+
+  res.json({ success: true, message: "Skill añadida correctamente." });
 });
+
+
 
 // 3) Arrancar el servidor
 const PORT = 3001; 

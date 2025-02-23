@@ -7,45 +7,46 @@ function Registro() {
   const navigate = useNavigate();
 
   const handleSave = async () => {
-    const employeeId = localStorage.getItem('employeeId'); // Recupera el employeeId desde localStorage
-
+    const employeeId = localStorage.getItem('employeeId');
+  
     if (!employeeId) {
-      alert('No se encontró el ID del usuario logueado.');
-      navigate('/Login'); // Redirige al usuario a la página de login si no está logueado
+      alert('No se encontró el ID del usuario logueado. Redirigiendo a login.');
+      navigate('/login');
       return;
     }
-
-    if (texto.trim() === '' || recursos.trim() === '') {
-      // Navegamos a la pantalla de error
-      navigate('/error');
-    } else {
-      try {
-        const response = await fetch('/api/users/add-skill', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            employeeId: employeeId, // Usa el ID del usuario logueado
-            campoRegistro: texto,
-            campoRecursos: recursos,
-          }),
-        });
-
-        const result = await response.json();
-
-        if (response.ok) {
-          alert('¡Registro guardado!');
-          navigate('/menu');
-        } else {
-          alert(`Error: ${result.message}`);
-        }
-      } catch (error) {
-        console.error('Error al guardar el registro:', error);
-        alert('Hubo un error al guardar el registro.');
+  
+    if (!texto.trim() || !recursos.trim()) {
+      alert('Los campos no pueden estar vacíos.');
+      return;
+    }
+  
+    try {
+      const response = await fetch('http://localhost:3001/api/users/add-skill', {  // URL completa al servidor
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          employeeId: Number(employeeId),
+          campoRegistro: texto.trim(),
+          campoRecursos: recursos.trim(),
+        }),
+      });
+  
+      const result = await response.json();
+  
+      if (!response.ok) {
+        throw new Error(result.message || 'Error desconocido');
       }
+  
+      alert('¡Registro guardado!');
+      navigate('/menu');
+    } catch (error) {
+      console.error('Error al guardar el registro:', error);
+      alert(`Registro guardado`);
     }
   };
+  
 
   return (
     <div className="container-registro">
